@@ -9,12 +9,12 @@ const Projects: FC = () => {
       className="flex text-center justify-center items-center mt-3 break-words flex-wrap"
     >
       {/* Left Section */}
-
       <h1 className="text-6xl text-white">Proj</h1>
 
       {Object.keys(projects).map((project) => (
         <Image
-          src={projects[project as keyof Projects].image}
+          key={project}  
+          src={projects[project as keyof typeof projects].image}
           alt="proj"
           width={300}
           height={300}
